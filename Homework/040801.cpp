@@ -7,7 +7,7 @@ int main()
     scanf("%d", &score);
     if (score > 100 || score < 0)
     {
-        printf("é”™è¯¯");
+        printf("´íÎó");
     }
     if (score >= 90 && score <= 100)
     {

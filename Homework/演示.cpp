@@ -2,7 +2,7 @@
 int main()
 {
     int x, y;
-    printf("璇疯緭鍏ヤ竴涓暟瀛楋細\n");
+    printf("请输入一个数字：\n");
     scanf("%d", &x);
 
     if(x < 1)

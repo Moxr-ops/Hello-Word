@@ -4,11 +4,11 @@ int main()
 {
     float score;
 
-    printf("è¯·è¾“å…¥æˆç»©ï¼š\n");
+    printf("ÇëÊäÈë³É¼¨\n");
     scanf("%f", &score);
     if (score > 100 || score < 0)
     {
-        printf("é”™è¯¯");
+        printf("´íÎó");
         return 0;
     }
     

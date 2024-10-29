@@ -1,0 +1,9 @@
+package com.mbs.test01
+
+public class HelloWorld
+{
+    public static void main(String[] args)
+    {
+        System.out.println("hgjvghvhvvbjhjhv恒丰会更加后账J干");
+    }
+}

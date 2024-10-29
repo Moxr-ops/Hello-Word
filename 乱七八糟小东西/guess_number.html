@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猜数字游戏</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .game-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>猜数字游戏</h1>
+        <p id="message">请你猜一个1到100之间的数字。</p>
+        <input type="number" id="guessInput" placeholder="输入一个数字">
+        <button onclick="checkGuess()">提交猜测</button>
+        <p id="attempts">猜测次数: 0</p>
+        <button onclick="resetGame()" id="resetButton" style="display: none;">重新开始</button>
+    </div>
+
+    <script>
+        let targetNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+        const messageElement = document.getElementById('message');
+        const attemptsElement = document.getElementById('attempts');
+        const guessInput = document.getElementById('guessInput');
+        const resetButton = document.getElementById('resetButton');
+
+        function checkGuess() {
+            const userGuess = parseInt(guessInput.value);
+            if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
+                messageElement.textContent = "输入的数字必须在1到100之间。";
+                return;
+            }
+
+            attempts++;
+            attemptsElement.textContent = `猜测次数: ${attempts}`;
+
+            if (userGuess < targetNumber) {
+                messageElement.textContent = "太小了!再试一次。";
+            } else if (userGuess > targetNumber) {
+                messageElement.textContent = "太大了!再试一次。";
+                } else {
+                    messageElement.textContent = `恭喜你!你猜对了。目标数字是 ${targetNumber}。`;
+                guessInput.disabled = true;
+                resetButton.style.display = 'inline-block';
+            }
+        }
+
+        function resetGame() {
+            targetNumber = Math.floor(Math.random() * 100) + 1;
+            attempts = 0;
+            messageElement.textContent = "你已经猜了一个1到100之间的数字。";
+            attemptsElement.textContent = "猜测次数: 0";
+            guessInput.value = "";
+            guessInput.disabled = false;
+            resetButton.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

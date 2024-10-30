@@ -16,9 +16,9 @@ int Fibonacci(int n) {
 int main() {
     double sum = 0.0;
     for (int i = 1; i <= 20; i++) {
-        int numerator = Fibonacci(i + 1);
-        int denominator = Fibonacci(i);
-        sum += (double)numerator / denominator;
+        int a = Fibonacci(i + 1);
+        int b = Fibonacci(i);
+        sum += (double)a / b;
     }
     printf("%lf\n", sum);
     return 0;

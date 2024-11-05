@@ -11,7 +11,7 @@ int main()
             { 
                 if (i * 100 + j * 10 + k == (int)(pow(i, 3) + pow(j, 3) + pow(k, 3))) 
                 {
-                    printf("%d%d%d\n", i, j, k);
+                    printf("%d\n", i * 100 + j * 10 + k);
                 }
             }
         }

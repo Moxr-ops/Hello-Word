@@ -1,2 +1,3 @@
-Hello! This is my first repository.
-And I will submit my homework here.
+# 杂物间
+
+用来存放程序设计作业和其他一些杂物

@@ -29,13 +29,12 @@ void print_arr(int* a, int r)
 
 int main() 
 {
-    int arr[4][4] = {
-        {1, 2, 3, 4},
-        {5, 6, 7, 8},
-        {9, 10, 11, 12},
-        {13, 14, 15, 16}
+    int arr[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
     };
-    det_transposition(&arr[0][0], 4);
-    print_arr(&arr[0][0], 4);
+    det_transposition(&arr[0][0], 3);
+    print_arr(&arr[0][0], 3);
     return 0;
 }
